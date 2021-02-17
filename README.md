@@ -53,6 +53,8 @@ $ npm start
 ### 006-directive
 
 - directives provide a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+- aspect oriented programming, intercepter
+- usages
   - cache
   - authorization
   - masking
@@ -60,10 +62,12 @@ $ npm start
   - localization
   - limitation
   - ...
-- aspect oriented
 - @cacheControl
   - automatically set the Cache-Control HTTP response header to an appropriate value describing the maxAge and scope, such as Cache-Control: max-age=60, private
 - @upper
-- @i18n
+- learn how to define & implement directive
+  - @l20n
 
 ### 007-subscription
+
+- learn how to implement publish/subscribe
