@@ -17,9 +17,7 @@ or
 $ npm start
 ```
 
-- start in graphiql (graphql sandbox)
-
-[http://localhost:4000/graphql](http://localhost:4000/graphql)
+- start in graphql sandbox : graphiql http://localhost:4000/graphql
 
 ## samples
 
@@ -62,9 +60,27 @@ $ npm start
   - localization
   - limitation
   - ...
-- @cacheControl
+- @cacheControl(maxAge: 60, scope="PRIVATE")
   - automatically set the Cache-Control HTTP response header to an appropriate value describing the maxAge and scope, such as Cache-Control: max-age=60, private
-- @upper
+- @deprecated(reason: "Field is replace author")
+- @defer, @stream
+  - https://foundation.graphql.org/news/2020/12/08/improving-latency-with-defer-and-stream-directives/
+  - The @defer directive can be applied to fragment spreads and inline fragments. It is a declarative way for developers to mark parts of a query as non-essential for immediate return.
+  - The @stream directive also allows the client to receive data before the entire result is ready. @stream can be used on list fields.
+- @skip, @include
+
+```
+query book($yes:Boolean!,$no:Boolean!){
+  books{
+    title @skip(if:$no)
+    author @include(if:$yes)
+  }
+}
+
+# varialbe
+{"yes":true,"no":false}
+```
+
 - learn how to define & implement directive
   - @l20n
 
