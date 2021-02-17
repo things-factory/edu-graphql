@@ -1,4 +1,4 @@
-const people = require("../data/person");
+const people = require("../../data/person");
 
 const resolvers = {
   Mutation: {
