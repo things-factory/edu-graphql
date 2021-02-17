@@ -1,0 +1,16 @@
+{
+  "name": "edu-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.21.0",
+    "deepmerge": "^4.2.2",
+    "graphql": "^15.5.0"
+  }
+}
