@@ -2,7 +2,7 @@ const people = require("../../data/person");
 
 const resolvers = {
   Mutation: {
-    createPerson: (root, { person }, context, info) => {
+    createPerson: (parent, { person }, context, info) => {
       people.push({
         id: people[people.length - 1].id + 1,
         ...person,
@@ -11,7 +11,7 @@ const resolvers = {
       return people[people.length - 1];
     },
 
-    updatePerson: (root, { id, patch }, context, info) => {
+    updatePerson: (parent, { id, patch }, context, info) => {
       var person = people.find((person) => person.id === id);
 
       if (person) {

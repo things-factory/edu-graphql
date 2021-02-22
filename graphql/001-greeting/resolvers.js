@@ -1,6 +1,8 @@
 const resolvers = {
   Query: {
-    greeting: () => "Happy new year & Merry Christmas",
+    greeting: function () {
+      return "Happy new year & Merry Christmas";
+    },
   },
 
   Mutation: {

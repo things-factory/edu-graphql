@@ -3,8 +3,11 @@ const avatar =
 
 const resolvers = {
   Person: {
-    avatar: (root, _, context, info) => {
+    avatar: (parent, _, context, info) => {
       return avatar;
+    },
+    name: (parent) => {
+      return parent.name;
     },
   },
 };
